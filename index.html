@@ -104,6 +104,150 @@
   @media(max-width:560px){.grid,.gallery{grid-template-columns:1fr}}
   .callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;align-items:center;justify-content:center;gap:.55rem;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#fff;font-weight:600;font-size:1.02rem;padding:15px;text-decoration:none;box-shadow:0 -10px 30px -12px rgba(0,0,0,.45)}
   @media(max-width:880px){ .callbar{display:flex} body{padding-bottom:62px} }
+
+/* === base premium === */
+/* BASE PREMIUM — wspólny system dla wszystkich branż (z _premium-web-craft.md).
+   Wstrzykiwany PO palecie skórki, PRZED overridem branżowym. Działa na realne klasy szablonu. */
+
+/* --- TOKENY: odstępy 4/8, fluid typografia clamp(), promienie, ruch, hairline, miękkie cienie --- */
+:root{
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px;
+  --space-6:32px; --space-7:48px; --space-8:64px; --space-9:96px; --space-10:128px;
+  --text-sm:clamp(.82rem,.8rem + .1vw,.9rem);
+  --text-base:clamp(1rem,.97rem + .15vw,1.125rem);
+  --text-lg:clamp(1.15rem,1.1rem + .25vw,1.35rem);
+  --text-h3:clamp(1.2rem,1.1rem + .5vw,1.5rem);
+  --text-h2:clamp(2rem,1.6rem + 2vw,2.9rem);
+  --text-h1:clamp(2.8rem,2rem + 4vw,5rem);
+  --r-sm:6px; --r-md:10px; --r-lg:16px;
+  --ease:cubic-bezier(.25,.46,.45,.94); --dur:.22s;
+  --hairline:1px solid color-mix(in srgb, var(--espresso) 12%, transparent);
+  --sh-sm:0 1px 2px rgba(0,0,0,.04), 0 2px 6px rgba(0,0,0,.05);
+  --sh-md:0 2px 4px rgba(0,0,0,.05), 0 8px 20px -6px rgba(0,0,0,.10);
+  --sh-lg:0 4px 8px rgba(0,0,0,.06), 0 18px 44px -16px rgba(0,0,0,.18);
+}
+
+/* --- WHITESPACE: hojny, fluid oddech (najtańszy wzrost postrzeganej ceny) --- */
+section{padding-block:clamp(64px,10vw,128px)}
+.wrap{max-width:min(92%,1140px)}
+
+/* --- TYPOGRAFIA: redakcyjna hierarchia, dociśnięte nagłówki, mierzona długość wiersza --- */
+.head{max-width:46rem}
+.head h2{font-size:var(--text-h2);letter-spacing:-.025em;line-height:1.1}
+.head p{font-size:var(--text-base);line-height:1.6;max-width:60ch;margin-inline:auto}
+.hero h1{font-size:var(--text-h1);letter-spacing:-.03em;line-height:1.05}
+.hero p.lead{font-size:var(--text-lg);max-width:34ch;line-height:1.55}
+.about-txt p{max-width:65ch}
+.reviews p{max-width:60ch;margin-inline:auto}
+
+/* --- OBRAZY: warstwowy miękki cień + większy promień (overlaye z szablonu zostają) --- */
+.hero-art,.about-art{box-shadow:var(--sh-lg);border-radius:var(--r-lg)}
+.map{box-shadow:var(--sh-md);border:none;border-radius:var(--r-lg)}
+
+/* --- KARTY: bez pełnej ramki, miękki cień, hierarchia promieni, sensowny hover --- */
+.card{border:none;box-shadow:var(--sh-sm);border-radius:var(--r-md);
+      padding:var(--space-6) var(--space-5);
+      transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--sh-md);border-color:transparent}
+.card h3{margin-bottom:var(--space-2)}
+.card p{color:var(--muted);font-size:var(--text-base);line-height:1.6}
+.card .ic{color:var(--gold-d);font-weight:700;letter-spacing:.08em}
+
+/* --- GALERIA: miękki cień + spójny hover --- */
+.tile{border-radius:var(--r-md);box-shadow:var(--sh-sm);
+      transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.tile:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
+
+/* --- CIEMNE/KOLOROWE TŁA: biel z opacity zamiast szarości (kontrast WCAG) --- */
+.reviews p{color:#fff;opacity:.78}
+
+/* --- KONTAKT: emoji-ikony w kółku z tłem (powiększone emoji = tell AI), hairline separatory --- */
+.info .row{border-bottom:var(--hairline)}
+.info .row .ic{width:40px;height:40px;flex:0 0 40px;display:grid;place-items:center;border-radius:50%;
+      background:color-mix(in srgb,var(--gold) 16%,transparent);font-size:1.05rem;margin-top:0}
+
+/* --- PRZYCISKI: płynne przejścia + efekt „wciśnięcia" --- */
+.btn{transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.btn:active{transform:translateY(0);box-shadow:var(--sh-sm)}
+
+/* --- RUCH / a11y: szanuj prefers-reduced-motion --- */
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;transition:none!important}
+  .reveal{opacity:1!important;transform:none!important}
+}
+
+/* === recipe overrides (stone) === */
+/* ====== STONE / KAMIENIARSTWO — premium override ====== */
+/* Ton godny, stonowany. Off-white kamienny, przygaszone złoto, hairline'y zamiast cieni. */
+
+/* Więcej oddechu, redakcyjna typografia */
+section{padding:124px 0}
+.hero h1{font-size:clamp(2.9rem,6.4vw,5rem);font-weight:500;letter-spacing:-.01em;line-height:1.06}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p.lead{font-size:1.16rem;line-height:1.75;color:var(--espresso-2);max-width:32rem}
+.eyebrow{letter-spacing:4px;color:var(--gold-d);font-weight:600}
+.head{max-width:46rem;margin:0 auto 60px}
+.head h2{font-size:clamp(2.1rem,4.2vw,3rem);font-weight:500;letter-spacing:.005em;line-height:1.18}
+.head p{color:var(--muted);font-size:1.02rem;line-height:1.7;margin-top:16px}
+/* Złocony hairline pod nagłówkiem sekcji — cienka kreska grawera */
+.head h2::after{content:"";display:block;width:52px;height:1px;background:var(--gold);margin:20px auto 0;opacity:.9}
+
+/* Spokojna, kamienna nakładka na hero (zamiast różowych radial-blobów) */
+.hero{background:linear-gradient(165deg,var(--white) 0%,var(--cream-2) 100%)}
+.hero-art{border-radius:4px;box-shadow:none;border:1px solid rgba(156,124,70,.28)}
+.hero-art::after{background:linear-gradient(180deg,rgba(31,28,26,.06),rgba(31,28,26,.28))}
+
+/* Pasek atutów — ciemne tło zostaje (lepszy kontrast złota), serif w liczbach */
+.strip .wrap{font-size:.86rem;letter-spacing:.4px}
+.strip b{color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-weight:600}
+
+/* Karty: HAIRLINE zamiast ciężkiego cienia, ostrzejsza forma kamienia */
+.card{background:var(--white);border:1px solid rgba(156,124,70,.22);border-radius:4px;padding:38px 32px;box-shadow:none}
+.card:hover{transform:none;box-shadow:none;border-color:var(--gold);background:var(--cream)}
+.card .ic{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:600;color:var(--gold);letter-spacing:0}
+.card .ic::after{height:1px;width:24px;background:var(--gold);opacity:.5}
+.card h3{font-weight:500;font-size:1.28rem}
+.card p{line-height:1.7}
+
+/* Subtelna tekstura piaskowca na jasnych blokach */
+.about,#kontakt.about{background:var(--cream-2);background-image:radial-gradient(rgba(31,28,26,.04) .5px,transparent .5px);background-size:4px 4px}
+.about-art{border-radius:4px;box-shadow:none}
+.about-art::before{background:linear-gradient(160deg,rgba(31,28,26,.4),rgba(31,28,26,.66))}
+/* Cytat w serif — godny, refleksyjny */
+.about-art .q{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.55rem}
+.about-art .q span{color:var(--gold)}
+/* Inicjał-wersalik jak grawer — duża pierwsza litera cytatu w złocie (anty-AI) */
+.about-art .q::first-letter{font-size:2.4em;line-height:.8;color:var(--gold);float:left;margin:.04em .12em 0 0;font-weight:600}
+.about-txt h2{font-weight:500}
+.about-txt p{line-height:1.78}
+
+/* Galeria gutterless / full-bleed — kamienna mozaika realizacji */
+.gallery{gap:2px}
+.tile{border-radius:0;box-shadow:none}
+.tile:hover{transform:none}
+.tile:hover::after{background:linear-gradient(180deg,rgba(31,28,26,.05) 30%,rgba(31,28,26,.6))}
+.tile span{font-weight:400;letter-spacing:.5px}
+
+/* Refleksyjna sekcja opinii — bez krzykliwości */
+.reviews .stars{color:var(--gold);font-size:1.2rem;letter-spacing:6px}
+.reviews h2{font-weight:500}
+
+/* Kontakt: hairline'y, mapa stonowana */
+.info .row{border-bottom:1px solid rgba(156,124,70,.22)}
+.map{border-radius:4px;box-shadow:none;border:1px solid rgba(156,124,70,.22)}
+.map iframe{filter:grayscale(.55) contrast(1.02)}
+
+/* Nawigacja godna, ciche złoto */
+header{background:rgba(244,241,236,.9);border-bottom:1px solid rgba(156,124,70,.2)}
+.btn{border-radius:2px;font-weight:500;letter-spacing:.3px}
+.btn-gold{background:var(--gold);box-shadow:none}
+.btn-gold:hover{transform:none;background:var(--gold-d);box-shadow:none}
+footer{background:var(--espresso)}
+
+@media(max-width:880px){
+  section{padding:80px 0}
+  .gallery{gap:2px}
+}
 </style>
 </head>
 <body>
