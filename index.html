@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kamieniarstwo Sarzyńska — Nagrobki i kamieniarstwo · Rzeszów</title>
+<meta name="description" content="Kamieniarstwo Sarzyńska — nagrobki granitowe, pomniki na zamówienie, renowacje i liternictwo. Z szacunkiem do pamięci, od projektu po montaż. Rzeszów i okolice." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* === PALETA — dostosuj do branży === */
+  :root{ --cream:#f4f4f3; --cream-2:#e6e6e4; --espresso:#21242a; --espresso-2:#3b4047; --gold:#8d7c54; --gold-d:#6f6140; --rose:#d6d4cd; --muted:#6e7176; --white:#fbfbfa; --shadow:0 18px 50px -22px rgba(33,36,42,.5); }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;color:var(--espresso);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.15}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;border-radius:999px;font-weight:500;font-size:.95rem;transition:.25s;cursor:pointer;border:1px solid transparent}
+  .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#fff;box-shadow:0 10px 24px -10px rgba(169,118,63,.7)}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 30px -10px rgba(169,118,63,.8)}
+  .btn-dark{background:var(--espresso);color:#fff}
+  .btn-dark:hover{background:var(--espresso-2)}
+  header{position:sticky;top:0;z-index:50;background:rgba(250,245,239,.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(192,145,95,.18)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;letter-spacing:.5px}
+  .logo span{color:var(--gold-d)}
+  .nav-links{display:flex;align-items:center;gap:2rem}
+  .nav-links a{font-size:.92rem;color:var(--espresso-2);transition:.2s}
+  .nav-links a:hover{color:var(--gold-d)}
+  .nav-links .btn{padding:.6rem 1.2rem}
+  .burger{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--espresso)}
+  .hero{position:relative;overflow:hidden;background:
+      radial-gradient(circle at 78% 18%,rgba(231,201,184,.55),transparent 46%),
+      radial-gradient(circle at 12% 88%,rgba(192,145,95,.30),transparent 40%),
+      linear-gradient(160deg,#fdf8f3 0%,#f1e2d4 100%)}
+  .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:84px 0 92px}
+  .eyebrow{display:inline-block;letter-spacing:3px;font-size:.74rem;font-weight:600;color:var(--gold-d);text-transform:uppercase;margin-bottom:18px}
+  .hero h1{font-size:clamp(3rem,7vw,5.4rem);font-weight:700;margin-bottom:18px;letter-spacing:-.018em}
+  .hero h1 em{font-style:italic;color:var(--gold-d)}
+  .hero p.lead{font-size:1.12rem;color:var(--espresso-2);max-width:30rem;margin-bottom:30px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-art{position:relative;height:430px;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);
+      background:url('img/hero.jpg') center 22%/cover no-repeat, linear-gradient(150deg,#efd9c6,#c0915f)}
+  .hero-art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,44,37,.04),rgba(58,44,37,.2))}
+  .strip{background:var(--espresso);color:#f3e7db}
+  .strip .wrap{display:flex;flex-wrap:wrap;gap:14px 40px;justify-content:center;padding:20px 24px;font-size:.92rem}
+  .strip span{display:inline-flex;align-items:center;gap:.55rem}
+  .strip b{color:var(--gold)}
+  section{padding:90px 0}
+  .head{text-align:center;max-width:42rem;margin:0 auto 54px}
+  .head .eyebrow{margin-bottom:12px}
+  .head h2{font-size:clamp(2rem,4vw,2.8rem);letter-spacing:-.012em}
+  .head p{color:var(--muted);margin-top:14px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{background:var(--white);border:1px solid rgba(192,145,95,.16);border-radius:18px;padding:30px 26px;transition:.28s}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(192,145,95,.4)}
+  .card .ic{display:flex;align-items:center;gap:12px;font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:700;letter-spacing:1px;color:var(--gold-d);margin-bottom:16px}
+  .card .ic::after{content:"";height:1.5px;width:30px;background:var(--gold);opacity:.55}
+  .card h3{font-size:1.2rem;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:.94rem}
+  .price-note{text-align:center;margin-top:34px;color:var(--muted);font-size:.92rem}
+  .about{background:linear-gradient(180deg,var(--cream),#f5ebe1)}
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
+  .about-art{height:360px;border-radius:22px;box-shadow:var(--shadow);position:relative;overflow:hidden;display:grid;place-items:center;color:#fff;text-align:center;
+      background:url('img/about.jpg') center/cover no-repeat,linear-gradient(140deg,#3a2c25,#5a463c)}
+  .about-art::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(58,44,37,.42),rgba(58,44,37,.68))}
+  .about-art .q{position:relative;z-index:2;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;padding:34px;line-height:1.4;text-shadow:0 3px 16px rgba(0,0,0,.45)}
+  .about-art .q span{color:var(--gold)}
+  .about-txt h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:18px}
+  .about-txt p{color:var(--espresso-2);margin-bottom:16px}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .tile{aspect-ratio:1/1;border-radius:16px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:18px;color:#fff;font-weight:600;box-shadow:0 12px 30px -16px rgba(58,44,37,.5);background-color:#c9a88f;background-size:cover;background-position:center;transition:.3s}
+  .tile:hover{transform:translateY(-4px)}
+  .tile span{position:relative;z-index:2;font-size:1rem;letter-spacing:.3px;text-shadow:0 2px 10px rgba(0,0,0,.45)}
+  .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,44,37,.05) 45%,rgba(58,44,37,.72))}
+  .reviews{background:var(--espresso);color:#f3e7db;text-align:center}
+  .reviews .stars{color:var(--gold);font-size:1.5rem;letter-spacing:4px;margin-bottom:14px}
+  .reviews h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:14px}
+  .reviews p{color:#cdbcae;max-width:36rem;margin:0 auto 28px}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+  .info .row{display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-bottom:1px solid rgba(192,145,95,.2)}
+  .info .row .ic{font-size:1.3rem;margin-top:2px}
+  .info .row a{font-weight:500}
+  .info .row a:hover{color:var(--gold-d)}
+  .map{min-height:340px;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(192,145,95,.2)}
+  .map iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:grayscale(.15) contrast(1.02)}
+  .contact-cta{margin-top:28px}
+  footer{background:#2c211c;color:#cdbcae;text-align:center;padding:34px 24px;font-size:.88rem}
+  footer .logo{font-size:1.2rem;color:#f3e7db;margin-bottom:8px}
+  footer a{color:var(--gold)}
+  .reveal{opacity:0;transform:translateY(22px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media(max-width:880px){
+    .hero-inner,.about-grid,.contact-grid{grid-template-columns:1fr}
+    .hero-art{height:300px;order:-1}
+    .grid,.gallery{grid-template-columns:repeat(2,1fr)}
+    .nav-links{position:fixed;inset:72px 0 auto 0;flex-direction:column;background:var(--cream);padding:24px;gap:18px;border-bottom:1px solid rgba(192,145,95,.2);display:none}
+    .nav-links.open{display:flex}
+    .burger{display:block}
+  }
+  @media(max-width:560px){.grid,.gallery{grid-template-columns:1fr}}
+  .callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;align-items:center;justify-content:center;gap:.55rem;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#fff;font-weight:600;font-size:1.02rem;padding:15px;text-decoration:none;box-shadow:0 -10px 30px -12px rgba(0,0,0,.45)}
+  @media(max-width:880px){ .callbar{display:flex} body{padding-bottom:62px} }
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <div class="logo">Kamieniarstwo <span>Sarzyńska</span></div>
+  <div class="nav-links" id="menu">
+    <a href="#oferta">Oferta</a><a href="#onas">O nas</a><a href="#galeria">Galeria</a><a href="#kontakt">Kontakt</a>
+    <a class="btn btn-gold" href="#galeria">Zobacz nasze realizacje</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Menu">☰</button>
+</nav></div></header>
+
+<section class="hero"><div class="wrap hero-inner">
+  <div>
+    <span class="eyebrow">Zakład kamieniarski · Rzeszów</span>
+    <h1>Nagrobki tworzone<br><em>z szacunkiem do pamięci</em></h1>
+    <p class="lead">Wykonujemy nagrobki i pomniki z granitu — od indywidualnego projektu, przez obróbkę kamienia, po staranny montaż. Spokojnie i bez pośpiechu pomożemy dobrać formę, materiał i napis, tak by miejsce pamięci wyglądało godnie przez lata.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#galeria">Zobacz nasze realizacje</a>
+      <a class="btn btn-dark" href="tel:+48452849702">Zadzwoń: +48 452 849 702</a>
+    </div>
+  </div>
+  <div class="hero-art" role="img" aria-label="Kamieniarstwo Sarzyńska"></div>
+</div></section>
+
+<div class="strip"><div class="wrap">
+  <span>✦ <b>Laureat</b>&nbsp;Orły Kamieniarstwa</span>
+  <span>✦ <b>Ocena 4,9</b>&nbsp;w Google</span>
+  <span>✦ <b>Indywidualny</b>&nbsp;projekt</span>
+  <span>✦ <b>Płatność</b>&nbsp;także w ratach</span>
+</div></div>
+
+<section id="oferta"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow">Czym się zajmujemy</span><h2>Nasza oferta</h2><p>Każde zlecenie traktujemy indywidualnie i z należytym wyczuciem. Doradzimy w wyborze kamienia, formy i napisu, a całość wykonamy we własnym zakładzie — od projektu po ustawienie na miejscu.</p></div>
+  <div class="grid">
+    <div class="card reveal"><div class="ic">01</div><h3>Nagrobki granitowe</h3><p>Nagrobki pojedyncze i podwójne z trwałego granitu, w klasycznych i nowoczesnych formach.</p></div>
+    <div class="card reveal"><div class="ic">02</div><h3>Pomniki na zamówienie</h3><p>Indywidualne projekty pomników dopasowane do oczekiwań rodziny i charakteru miejsca.</p></div>
+    <div class="card reveal"><div class="ic">03</div><h3>Renowacja nagrobków</h3><p>Odnawianie, czyszczenie i poprawa starszych nagrobków, by wróciły do godnego stanu.</p></div>
+    <div class="card reveal"><div class="ic">04</div><h3>Liternictwo i napisy</h3><p>Wykonanie i odnowienie napisów, liter oraz złoceń — czytelnie i estetycznie.</p></div>
+    <div class="card reveal"><div class="ic">05</div><h3>Grobowce i obramowania</h3><p>Piwnice, obramowania i elementy uzupełniające, montowane solidnie i z dbałością o detal.</p></div>
+    <div class="card reveal"><div class="ic">06</div><h3>Galanteria kamienna</h3><p>Parapety, blaty, schody i elementy z granitu oraz marmuru na indywidualny wymiar.</p></div>
+  </div>
+  <p class="price-note">Wycena i terminy ustalane indywidualnie: <a href="#kontakt" style="color:var(--gold-d);font-weight:500">zapytaj o szczegóły →</a></p>
+</div></section>
+
+<section class="about" id="onas"><div class="wrap about-grid">
+  <div class="about-art reveal"><div class="q">„Wykonujemy każdy nagrobek tak, jak <span>chcielibyśmy uczcić własnych bliskich</span>.”</div></div>
+  <div class="about-txt reveal">
+    <span class="eyebrow">O nas</span><h2>Rzemiosło i wyczucie w jednym</h2>
+    <p>Kamieniarstwo Sarzyńska to zakład kamieniarski, w którym granit zamienia się w trwałe miejsca pamięci. Pracujemy z kamieniem od projektu po montaż — bez pośrednictwa, dzięki czemu mamy wpływ na każdy detal i pilnujemy jakości na każdym etapie.</p><p>Rozumiemy, że to nie jest zwykłe zlecenie. Dlatego rozmawiamy spokojnie, doradzamy bez nacisku i dajemy czas na decyzję. Podpowiemy, jaki kamień i forma sprawdzą się najlepiej, przygotujemy uczciwą wycenę, a po pracy zostawimy po sobie porządek.</p>
+    <a class="btn btn-dark" href="#kontakt" style="margin-top:8px">Odwiedź nas</a>
+  </div>
+</div></section>
+
+<section id="galeria"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow">Galeria</span><h2>Kamień, z którego tworzymy</h2><p>Rodzaje kamienia i faktur, których używamy przy nagrobkach i galanterii — od ciemnego, eleganckiego granitu po jasny marmur. Pełne realizacje pokażemy podczas spotkania.</p></div>
+  <div class="gallery">
+    <div class="tile reveal" style="background-image:url('img/g1.jpg')"><span>Granit polerowany</span></div>
+    <div class="tile reveal" style="background-image:url('img/g2.jpg')"><span>Marmur</span></div>
+    <div class="tile reveal" style="background-image:url('img/g3.jpg')"><span>Granit jasny</span></div>
+    <div class="tile reveal" style="background-image:url('img/g4.jpg')"><span>Granit naturalny</span></div>
+    <div class="tile reveal" style="background-image:url('img/g5.jpg')"><span>Kamień łupany</span></div>
+    <div class="tile reveal" style="background-image:url('img/g6.jpg')"><span>Marmur jasny</span></div>
+  </div>
+</div></section>
+
+<section class="reviews"><div class="wrap reveal">
+  <div class="stars">★ ★ ★ ★ ★</div><h2>Zaufały nam rodziny</h2><p>Rodziny, które powierzyły nam wykonanie nagrobka, doceniają spokojne podejście, solidne rzemiosło i to, że dotrzymujemy ustaleń oraz terminów. Średnia ocena 4,9 w Google (54 opinie) jest dla nas zobowiązaniem, nie tylko liczbą.</p>
+  <a class="btn btn-gold" href="tel:+48452849702">Zadzwoń i porozmawiajmy spokojnie</a>
+</div></section>
+
+<section id="kontakt" class="about"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow">Zapraszamy</span><h2>Kontakt i rezerwacja</h2></div>
+  <div class="contact-grid">
+    <div class="info reveal">
+      <div class="row"><span class="ic">📍</span><div><b>Adres</b><p>Polna 29, 35-321 Rzeszów</p></div></div>
+      <div class="row"><span class="ic">📞</span><div><b>Telefon</b><p><a href="tel:+48452849702">+48 452 849 702</a></p></div></div>
+      <div class="row"><span class="ic">🗓️</span><div><b>Rezerwacja</b><p>Zadzwoń i umów spokojną rozmowę</p></div></div>
+      <div class="row"><span class="ic">⏰</span><div><b>Godziny</b><p>Zapraszamy — zadzwoń, ustalimy dogodny termin</p></div></div>
+      <div class="contact-cta"><a class="btn btn-gold" href="tel:+48452849702">Zadzwoń: +48 452 849 702</a></div>
+    </div>
+    <div class="map reveal"><iframe src="https://maps.google.com/maps?q=50.0441194,22.0372568&z=18&output=embed" loading="lazy" title="Mapa — Kamieniarstwo Sarzyńska"></iframe></div>
+  </div>
+</div></section>
+
+<a class="callbar" href="tel:+48452849702">📞 Zadzwoń: +48 452 849 702</a>
+
+<footer>
+  <div class="logo">Kamieniarstwo <span style="color:var(--gold)">Sarzyńska</span></div>
+  <p>Polna 29, 35-321 Rzeszów · +48 452 849 702</p>
+  <p style="margin-top:6px;opacity:.7">© 2026 Kamieniarstwo Sarzyńska &nbsp;·&nbsp; Projekt strony: <a href="#">BITA</a></p>
+</footer>
+
+<script>
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){m.classList.toggle('open')});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open')})});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
