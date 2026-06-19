@@ -110,7 +110,7 @@
 <header><div class="wrap"><nav>
   <div class="logo">Kamieniarstwo <span>Sarzyńska</span></div>
   <div class="nav-links" id="menu">
-    <a href="#oferta">Oferta</a><a href="#onas">O nas</a><a href="#galeria">Galeria</a><a href="#kontakt">Kontakt</a>
+    <a href="#oferta">Oferta</a><a href="#onas">O nas</a><a href="#galeria">Galeria</a><a href="#projekty3d">Projekty 3D</a><a href="#kontakt">Kontakt</a>
     <a class="btn btn-gold" href="#galeria">Zobacz nasze realizacje</a>
   </div>
   <button class="burger" id="burger" aria-label="Menu">☰</button>
@@ -168,6 +168,31 @@
     <div class="tile reveal" style="background-image:url('img/g5.jpg')"><span>Kamień łupany</span></div>
     <div class="tile reveal" style="background-image:url('img/g6.jpg')"><span>Marmur jasny</span></div>
   </div>
+</div></section>
+
+<style>
+  .p3d-sec{background:var(--cream-2)}
+  .p3d-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+  .p3d-card{background:var(--white);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+  .p3d-frame{position:relative;width:100%;aspect-ratio:16/10;background:#16181c}
+  .p3d-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .p3d-cap{padding:13px 16px 15px;font-weight:500;color:var(--espresso);font-size:1rem;display:flex;align-items:center;gap:.5rem}
+  .p3d-cap span{color:var(--gold-d);font-size:.82rem}
+  .p3d-credit{text-align:center;margin-top:28px;color:var(--muted);font-size:.9rem}
+  @media(max-width:900px){.p3d-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:600px){.p3d-grid{grid-template-columns:1fr}}
+</style>
+<section id="projekty3d" class="p3d-sec"><div class="wrap">
+  <div class="head reveal"><span class="eyebrow">Zobacz w 3D</span><h2>Projekty 3D</h2><p>Nasze projekty nagrobków możesz obejrzeć w pełnym 3D — kliknij wybrany model, by go uruchomić, a następnie obróć go i przyjrzyj mu się z każdej strony, dokładnie tak, jak będzie wyglądał na miejscu.</p></div>
+  <div class="p3d-grid">
+    <div class="p3d-card reveal"><div class="p3d-frame"><iframe title="Nagrobek podwójny z krzyżem" src="https://sketchfab.com/models/49277cb567ef4836b98c0ac6233e3d74/embed?ui_theme=dark&ui_hint=0" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen loading="lazy"></iframe></div><div class="p3d-cap">Nagrobek podwójny z krzyżem <span>· obróć w 3D</span></div></div>
+    <div class="p3d-card reveal"><div class="p3d-frame"><iframe title="Pomnik z ciemnego granitu" src="https://sketchfab.com/models/98b7b25e7d604aeb81735a3bd98fb80a/embed?ui_theme=dark&ui_hint=0" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen loading="lazy"></iframe></div><div class="p3d-cap">Pomnik z ciemnego granitu <span>· obróć w 3D</span></div></div>
+    <div class="p3d-card reveal"><div class="p3d-frame"><iframe title="Nagrobki w jasnym granicie" src="https://sketchfab.com/models/aecd7af1e6a84d29ae16679f3d591a7a/embed?ui_theme=dark&ui_hint=0" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen loading="lazy"></iframe></div><div class="p3d-cap">Nagrobki w jasnym granicie <span>· obróć w 3D</span></div></div>
+    <div class="p3d-card reveal"><div class="p3d-frame"><iframe title="Warianty i kształty nagrobków" src="https://sketchfab.com/models/22b4dd6541bc46e1b6eda77c3b13d14f/embed?ui_theme=dark&ui_hint=0" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen loading="lazy"></iframe></div><div class="p3d-cap">Warianty i kształty <span>· obróć w 3D</span></div></div>
+    <div class="p3d-card reveal"><div class="p3d-frame"><iframe title="Czarny granit polerowany" src="https://sketchfab.com/models/19108b957a0c4a98b16a448f84b3b1c5/embed?ui_theme=dark&ui_hint=0" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen loading="lazy"></iframe></div><div class="p3d-cap">Czarny granit polerowany <span>· obróć w 3D</span></div></div>
+    <div class="p3d-card reveal"><div class="p3d-frame"><iframe title="Nagrobek nowoczesny" src="https://sketchfab.com/models/c0a7a83a9e7a48d3b92fcb54050a29fa/embed?ui_theme=dark&ui_hint=0" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen loading="lazy"></iframe></div><div class="p3d-cap">Nagrobek nowoczesny <span>· obróć w 3D</span></div></div>
+  </div>
+  <p class="p3d-credit">Wizualizacje 3D: Wojciech Homa</p>
 </div></section>
 
 <section class="reviews"><div class="wrap reveal">
